@@ -34,9 +34,22 @@ export default function Navbar() {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><a>Artists</a></li>
-                    <li><a>Services</a></li>
+                    <li tabIndex="0">
+                        <a>
+                            Services
+                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                 viewBox="0 0 24 24">
+                                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
+                            </svg>
+                        </a>
+                        <ul className="p-2">
+                            <li><a>Production</a></li>
+                            <li><a>Mixing/Mastering</a></li>
+                            <li><a>Promotion</a></li>
+                        </ul>
+                    </li>
 
-                    <li><a>Item 3</a></li>
+                    <li><a>How to join</a></li>
                 </ul>
             </div>
             <div className="navbar-end">
