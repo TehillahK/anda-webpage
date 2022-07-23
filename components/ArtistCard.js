@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const ArtistCard = () => {
   return(
-      <div className=" flex  flex-col justify-center w-fit  text-center">
+      <div className=" flex  flex-col justify-center  text-center">
           <Image src={"/artist-image.png"}
-                 width={500} height={500}
+                 width={800} height={800}
                  objectFit={"cover"}
           />
           <h3>Tom Talon</h3>

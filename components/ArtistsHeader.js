@@ -1,6 +1,6 @@
 const ArtistsHeader = () => {
   return(
-      <div className="hero h-96 bg-base-100">
+      <div className="hero min-h-screen bg-base-100" style={{backgroundImage:"url(/artistbg.png);"}}>
           <div className="hero-content text-center">
               <div className="max-w-lg">
                   <h1 className="text-5xl font-bold">ANDA Artists</h1>

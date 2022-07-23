@@ -29,25 +29,25 @@ function AlbumCube() {
             <SwiperSlide>
                 <div className={"w-fit"}>
                     <img className={"max-w-md"} src="/phase1.png" />
-                    <h2 className={"text-center text-2xl font-bold text-blue-300"}>Phase 1 by ANDA</h2>
+                    <h2 className={"text-center text-2xl font-bold text-black"}>Phase 1 by ANDA</h2>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className={"w-fit"}>
                     <img className={"max-w-md"} src="/stockholm.png" />
-                    <h2 className={"text-center text-2xl font-bold text-blue-300"}>Stockholm by DAE the VIDEO</h2>
+                    <h2 className={"text-center text-2xl font-bold text-black"}>Stockholm by DAE the VIDEO</h2>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className={"w-fit"}>
                     <img className={"max-w-md"} src="/phase2.png" />
-                    <h2 className={"text-center text-2xl font-bold text-blue-300"}>Phase 2 by ANDA</h2>
+                    <h2 className={"text-center text-2xl font-bold text-black"}>Phase 2 by ANDA</h2>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className={"w-fit"}>
                     <img className={"max-w-sm"} src="/maryland.png" />
-                    <h2 className={"text-center text-2xl font-bold text-blue-300"}>Maryland by Ri</h2>
+                    <h2 className={"text-center text-2xl font-bold text-black"}>Maryland by Ri</h2>
                 </div>
             </SwiperSlide>
         </Swiper>
