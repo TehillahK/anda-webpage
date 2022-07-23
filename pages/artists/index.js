@@ -37,7 +37,7 @@ export default function ArtistsPage () {
                     slideShadows: false
                 }}
                 slidesPerView={3}
-                centeredSlides
+                
 
                 grabCursor={true}
                 modules={[EffectCoverflow]}
