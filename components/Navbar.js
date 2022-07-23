@@ -42,7 +42,7 @@ export default function Navbar() {
                                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
                             </svg>
                         </a>
-                        <ul className="p-2">
+                        <ul tabIndex="0" className=" menu dropdown-content p-2 shadow  rounded-box w-52 mt-4 bg-white ">
                             <li><a>Production</a></li>
                             <li><a>Mixing/Mastering</a></li>
                             <li><a>Promotion</a></li>
