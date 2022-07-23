@@ -22,8 +22,10 @@ export default function ArtistsPage () {
             <Head>
                 <title>Artists</title>
             </Head>
-            <Navbar />
-            <ArtistsHeader />
+            <header className={"bg-gradient-to-r from-indigo-500 mb-12  "}>
+                <Navbar />
+                <ArtistsHeader />
+            </header>
             <h1 className="text-5xl font-bold text-center pb-6">The Roster</h1>
             <Swiper
                 navigation
@@ -37,7 +39,7 @@ export default function ArtistsPage () {
                     slideShadows: false
                 }}
                 slidesPerView={3}
-                
+
 
                 grabCursor={true}
                 modules={[EffectCoverflow]}
