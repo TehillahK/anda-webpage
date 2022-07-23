@@ -14,6 +14,7 @@ import Navbar from "../../components/Navbar";
 import ArtistsHeader from "../../components/ArtistsHeader";
 import Footer from "../../components/Footer";
 import AlbumsAd from "../../components/AlbumsAd";
+import Collaborators from "../../components/Collaborators";
 
 export default function ArtistsPage () {
     return(
@@ -54,7 +55,7 @@ export default function ArtistsPage () {
 
             </Swiper>
             <AlbumsAd />
-
+            <Collaborators />
             <Footer />
         </div>
     )
