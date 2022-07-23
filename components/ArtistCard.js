@@ -5,7 +5,7 @@ const ArtistCard = () => {
   return(
       <div className=" flex  flex-col justify-center  text-center">
           <Image src={"/artist-image.png"}
-                 width={400} height={400}
+                 width={700} height={700}
                  objectFit={"cover"}
           />
           <h3>Tom Talon</h3>

@@ -28,7 +28,8 @@ export default function ArtistsPage () {
             </header>
             <h1 className="text-5xl font-bold text-center pb-6">The Roster</h1>
             <Swiper
-                navigation
+                loop={true}
+                centeredSlides={true}
                 pagination={{ clickable: true }}
                 effect="coverflow"
                 coverflowEffect={{
