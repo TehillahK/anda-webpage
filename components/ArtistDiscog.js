@@ -16,8 +16,8 @@ function Album(props) {
   return(
       <div>
         <Image src={photoUrl} height={500} width={500} objectFit={"cover"} />
-          <h3 className={" "}>{title}</h3>
-          <p>Released on May 26,2022</p>
+          <h3 className={"mb-3 mt-3"}>{title}</h3>
+          <p  className={"mb-3"}>Released on May 26,2022</p>
 
         <a href={link} className="btn btn-primary">Download</a>
       </div>
