@@ -11,10 +11,7 @@ export default function Home() {
             <Head>
                 <title>ANDA Records</title>
                 <meta name="description"
-                      content="ANDA is a rap and alternative R&B group with 10 artists and 6 producers. It was Created in January 2021, along with its namesake ANDA Records, a label for the members of the group, founded on collectivist values.
-
-           
-                      "/>
+                      content="ANDA is a rap and alternative R&B group with 10 artists and 6 producers. It was Created in January 2021, along with its namesake ANDA Records, a label for the members of the group, founded on collectivist values. "/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <Navbar/>
