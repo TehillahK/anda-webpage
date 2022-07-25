@@ -1,8 +1,36 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+
+import Image from "next/image";
+
+import { EffectCards } from "swiper";
+
+
+function ArtistsCard(){
+    return(
+        <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper"
+        >
+            <SwiperSlide>Slide 1</SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>Slide 3</SwiperSlide>
+
+        </Swiper>
+    )
+
+}
 const ArtistsHeader = () => {
   return(
-      <div className="hero h-96  bg-transparent  md:min-h-screen" >
-          <div className="hero-content flex-col content-start">
-              <span ><span /></span>
+
+      <div className="hero   bg-transparent  md:min-h-screen" >
+          <div className="hero-content flex-col lg:flex-row-reverse">
+
               <div >
                   <h1 className="text-5xl font-bold">Artists</h1>
                   <p className="text-2xl py-6 "> ANDA focuses on applying commercially
@@ -18,6 +46,7 @@ const ArtistsHeader = () => {
               </div>
           </div>
       </div>
+
   )
 }
 
