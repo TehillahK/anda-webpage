@@ -4,7 +4,7 @@ const ArtistHeader = (props) => {
     const name = props.name;
     const type = props.type;
     return(
-        <div className="hero min-h-screen bg-base-100">
+        <div className="hero bg-base-100 md:min-h-screen">
         <div className="hero-content flex-col ">
 
             <div className={" flex flex-col text-center"}>

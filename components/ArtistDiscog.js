@@ -9,20 +9,24 @@ import { EffectFlip, Pagination, Navigation } from "swiper";
 import Image from "next/image";
 
 
-function Album() {
+function Album(props) {
+    const photoUrl = props.photoUrl;
+    const link = props.link;
+    const title = props.title;
   return(
       <div>
-        <Image src="https://firebasestorage.googleapis.com/v0/b/anda-website-24a18.appspot.com/o/stwave-saucy.jpg?alt=media&token=00816de3-e715-4f9c-aea1-1bc9a4cd588b" height={500} width={500} objectFit={"cover"} />
-          <h3 className={" "}>Saucy feat. GVZA</h3>
+        <Image src={photoUrl} height={500} width={500} objectFit={"cover"} />
+          <h3 className={" "}>{title}</h3>
           <p>Released on May 26,2022</p>
 
-        <button className="btn btn-primary">Download</button>
+        <a href={link} className="btn btn-primary">Download</a>
       </div>
   )
 }
 
 
-function Music() {
+function Music(props) {
+    const albums=props.albums;
   return(
       <Swiper
           effect={"flip"}
@@ -32,24 +36,33 @@ function Music() {
           modules={[EffectFlip, Pagination, Navigation]}
           className="mySwiper"
       >
-        <SwiperSlide>
-            <Album />
-        </SwiperSlide>
-        <SwiperSlide>
-            <Album />
-        </SwiperSlide>
+
+          {
+              albums.map(
+                  (album)=>{
+                      return(
+                          <SwiperSlide key={album.title}>
+                              <Album title={album.title} link={album.link} photoUrl={album.photoUrl} />
+                          </SwiperSlide>
+                      )
+
+                  }
+              )
+          }
+
 
       </Swiper>
   )
 }
 
-const ArtistDiscog = () => {
+const ArtistDiscog = (props) => {
+    const albums = props.discography;
   return(
       <div className="hero min-h-screen bg-base-100">
         <div className="hero-content text-center">
           <div className="max-w-xs">
             <h1 className="text-5xl font-bold mb-6">Discography</h1>
-            <Music />
+            <Music albums={albums} />
           </div>
         </div>
       </div>
