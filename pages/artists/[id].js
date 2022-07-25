@@ -54,9 +54,9 @@ export default function ArtistPage({artist}){
                 <title>{pageTitle}</title>
             </Head>
             <Navbar />
-            <ArtistHeader photoUrl={artist.photoUrl} name={artist.name} />
-            <ArtistBio />
-            <ArtistDiscog />
+            <ArtistHeader type={artist.type} photoUrl={artist.photoUrl} name={artist.name} />
+            <ArtistBio bio={artist.bio} />
+            <ArtistDiscog  />
             <ArtistShows />
             <Footer />
         </div>

@@ -2,6 +2,7 @@ import Image from "next/image";
 const ArtistHeader = (props) => {
     const photoUrl = props.photoUrl;
     const name = props.name;
+    const type = props.type;
     return(
         <div className="hero min-h-screen bg-base-100">
         <div className="hero-content flex-col ">
