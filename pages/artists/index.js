@@ -42,6 +42,7 @@ export default function ArtistsPage({artists}) {
         <div>
             <Head>
                 <title>Artists</title>
+                <meta name="description" content="ANDA is a rap and alternative R&B group with 10 artists and 6 producers" />
             </Head>
 
             <header className={"bg-gradient-to-r from-indigo-500 mb-12  "}>

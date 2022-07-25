@@ -13,6 +13,9 @@ function Album() {
   return(
       <div>
         <Image src="https://firebasestorage.googleapis.com/v0/b/anda-website-24a18.appspot.com/o/stwave-saucy.jpg?alt=media&token=00816de3-e715-4f9c-aea1-1bc9a4cd588b" height={500} width={500} objectFit={"cover"} />
+          <h3 className={" "}>Saucy feat. GVZA</h3>
+          <p>Released on May 26,2022</p>
+
         <button className="btn btn-primary">Download</button>
       </div>
   )
