@@ -44,7 +44,7 @@ const ArtistDiscog = () => {
   return(
       <div className="hero min-h-screen bg-base-100">
         <div className="hero-content text-center">
-          <div className="max-w-md">
+          <div className="max-w-xs">
             <h1 className="text-5xl font-bold mb-6">Discography</h1>
             <Music />
           </div>
