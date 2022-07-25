@@ -8,13 +8,13 @@ import { initializeApp } from "firebase/app";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBwkIsO8ivQ_DPkxKKhi_YlIgAlTiYReug",
-    authDomain: "anda-website-24a18.firebaseapp.com",
-    projectId: "anda-website-24a18",
-    storageBucket: "anda-website-24a18.appspot.com",
-    messagingSenderId: "872483861209",
-    appId: "1:872483861209:web:a6d7f794893af79d3d44c8",
-    measurementId: "G-K74ZZSKG60"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDING_ID,
+    appId: process.env.APP_ID,
+    measurementId: process.env.MEASUREMENT_ID
 };
 
 const firebaseApp  = initializeApp(firebaseConfig)

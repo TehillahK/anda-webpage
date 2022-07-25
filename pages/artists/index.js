@@ -18,70 +18,80 @@ import {Parallax, ParallaxLayer} from '@react-spring/parallax'
 
 import {useCollection} from "react-firebase-hooks/firestore";
 import firebaseApp from "../../firebase/firebase.config"
-import { getFirestore, collection } from 'firebase/firestore';
+import {getFirestore, collection, getDocs} from 'firebase/firestore';
 
 
 export async function getServerSideProps() {
     // Fetch data from external API
-    const res = await fetch("http://localhost:3000/api/artists");
-    const artists  = await res.json();
+    const querySnapshot = await getDocs(collection(getFirestore(firebaseApp), "artists"))
+    const artists = [];
+    querySnapshot.forEach((doc) => {
 
+        // doc.data() is never undefined for query doc snapshots
+
+        artists.push({id: doc.id, ...doc.data()})
+    });
 
     // Pass data to the page via props
     return {props: {artists}};
 }
+
 export default function ArtistsPage({artists}) {
-   console.log(artists)
+    console.log(artists)
     return (
         <div>
             <Head>
                 <title>Artists</title>
             </Head>
 
-                    <header className={"bg-gradient-to-r from-indigo-500 mb-12  "}>
-                        <Navbar/>
-                        <ArtistsHeader/>
-                    </header>
+            <header className={"bg-gradient-to-r from-indigo-500 mb-12  "}>
+                <Navbar/>
+                <ArtistsHeader/>
+            </header>
 
-                    <div>
-                    <h1 className="text-5xl font-bold text-center pb-6 ">The Roster</h1>
-                    <Swiper
-                        loop={true}
-                        centeredSlides={true}
-                        pagination={{clickable: true}}
-                        effect="coverflow"
-                        coverflowEffect={{
-                            rotate: 50,
-                            stretch: 0,
-                            depth: 100,
-                            modifier: 1,
-                            slideShadows: false
-                        }}
-                        slidesPerView={3}
+            <div>
+                <h1 className="text-5xl font-bold text-center pb-6 ">The Roster</h1>
+                <Swiper
+                    loop={true}
+                    centeredSlides={true}
+                    pagination={{clickable: true}}
+                    effect="coverflow"
+                    coverflowEffect={{
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: false
+                    }}
+                    slidesPerView={3}
 
 
-                        grabCursor={true}
-                        modules={[EffectCoverflow]}
+                    grabCursor={true}
+                    modules={[EffectCoverflow]}
 
-                    >
-                        <SwiperSlide>
-                            <ArtistCard/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ArtistCard/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ArtistCard/>
-                        </SwiperSlide>
+                >
+                    {
+                        artists.map(
+                            (artist) => {
+                                return (
+                                    <SwiperSlide key={artist.id}>
+                                        <ArtistCard photoUrl={artist.photoUrl} name={artist.name} type={artist.type}
+                                                    country={artist.country} city={artist.city} id={artist.id}/>
+                                    </SwiperSlide>
+                                )
+                            }
+                        )
+                    }
 
-                    </Swiper>
-                    </div>
 
-                    <AlbumsAd/>
+                </Swiper>
+            </div>
 
-                    <Collaborators/>
+            <AlbumsAd/>
 
-                    <Footer />
+            <Collaborators/>
+
+            <Footer/>
 
 
         </div>
