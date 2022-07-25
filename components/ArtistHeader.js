@@ -3,7 +3,7 @@ const ArtistHeader = (props) => {
     const photoUrl = props.photoUrl;
     const name = props.name;
     return(
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-base-100">
         <div className="hero-content flex-col ">
 
             <div className={" flex flex-col text-center"}>
