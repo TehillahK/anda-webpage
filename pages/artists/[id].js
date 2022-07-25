@@ -49,6 +49,7 @@ export const getStaticProps = async (context) => {
 export default function ArtistPage({artist}){
     const pageTitle = `${artist.name} | ANDA Artist`
     const discog = artist.discography;
+    const description = artist.description;
     console.log(discog)
     return(
         <div>
@@ -56,7 +57,7 @@ export default function ArtistPage({artist}){
                 <title>{pageTitle}</title>
             </Head>
             <Navbar />
-            <ArtistHeader type={artist.type} photoUrl={artist.photoUrl} name={artist.name} />
+            <ArtistHeader type={artist.type} photoUrl={artist.photoUrl} name={artist.name} description={description} />
             <ArtistBio bio={artist.bio} />
             <ArtistDiscog discography={discog}  />
             <ArtistShows />
