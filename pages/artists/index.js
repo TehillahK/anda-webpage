@@ -41,7 +41,7 @@ export default function ArtistsPage({artists}) {
     return (
         <div>
             <Head>
-                <title>Artists</title>
+                <title>ANDA Records | Artists</title>
                 <meta name="description" content="ANDA is a rap and alternative R&B group with 10 artists and 6 producers" />
             </Head>
 
