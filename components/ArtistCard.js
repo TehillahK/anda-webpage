@@ -13,6 +13,7 @@ const ArtistCard = (props) => {
           <Image src={photoUrl}
                  width={700} height={700}
                  objectFit={"cover"}
+                 priority
           />
           <h3>{artistName}</h3>
           <p>{artistType}</p>

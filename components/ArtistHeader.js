@@ -10,7 +10,9 @@ const ArtistHeader = (props) => {
                 <h1 className="text-5xl font-bold mb-3">{name}</h1>
                 <p className={"mb-3"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
                 <Image src={photoUrl} width={400} height={400} objectFit={"cover"}
-                       alt={`Photo of the musician ${name}`} objectPosition={"80% 0"}/>
+                       alt={`Photo of the musician ${name}`} objectPosition={"80% 0"}
+                       priority
+                />
                 <div className={"mt-3 flex flex-row justify-between"}>
                     <button className="btn btn-primary">Instgram</button>
                     <button className="btn btn-primary">Twitter</button>
