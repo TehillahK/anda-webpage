@@ -43,7 +43,9 @@ export default function ProductionTeam({producers}) {
                     producers.map((producer,index)=>{
                         return(
                             <ParallaxLayer key={producer.id} offset={index+1} speed={0.5}>
-                                    <ProducerBio photoUrl={producer.photoUrl} name={producer.name} bio={producer.bio}  />
+                                    <ProducerBio photoUrl={producer.photoUrl} name={producer.name} bio={producer.bio}
+                                                 daws={producer.daws} instruments={producer.instruments}
+                                                 credits={producer.credits}  />
                             </ParallaxLayer>
                         )
                     })

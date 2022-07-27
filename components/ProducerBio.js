@@ -4,6 +4,9 @@ const ProducerBio = (props) => {
     const name = props.name;
     const photoUrl = props.photoUrl;
     const bio = props.bio;
+    const daws = props.daws;
+    const instruments = props.instruments;
+    const credits = props.credits
   return(
       <div className="hero min-h-screen min-w-fit bg-base-100">
           <div className="hero-content flex-col lg:flex-row">
@@ -18,15 +21,41 @@ const ProducerBio = (props) => {
                   </ul>
                   <h2 className="text-2xl font-bold">Instruments</h2>
                   <ul className="py-2 ml-3">
-                      <li>Guitar</li>
+                      {
+                          instruments.map(
+                              (instrument,key)=>{
+                                  return(
+                                      <li key={instrument}>{instrument}</li>
+                                  )
+                              }
+                          )
+                      }
                   </ul>
                   <h2 className="text-2xl font-bold">DAWS</h2>
-                  <ul className="py-2 ml-3">
-                      <li>Fruity Loops</li>
+                  <ul className="py-2 ml-3 flex flex-row">
+
+                      {
+                          daws.map(
+                              (daw)=>{
+                                  return(
+                                      <li className={"mr-0.5"} key={daw}> {daw}</li>
+                                  )
+                              }
+                          )
+                      }
                   </ul>
                   <h2 className="text-2xl font-bold">Credits</h2>
                   <ul className="py-1 ml-3 flex flex-col ">
-                      <li className={"my-1"}>ANDA - Fight That feat. John Givez & Science</li>
+                      {
+                          credits.map(
+                              (credit)=>{
+                                  return(
+                                      <li key={credit} className={"my-1"}>{credit.title}</li>
+                                  )
+                              }
+                          )
+                      }
+
                   </ul>
                   <div className={"flex flex-row "} >
                       <button className={"btn btn-sm mr-1"}>Instagram</button>
