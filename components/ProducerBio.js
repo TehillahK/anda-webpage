@@ -20,7 +20,7 @@ const ProducerBio = (props) => {
                   <ul className="py-2 ml-3">
                       <li>Guitar</li>
                   </ul>
-                  <h2 className="text-2xl font-bold">DAW'S</h2>
+                  <h2 className="text-2xl font-bold">DAWS</h2>
                   <ul className="py-2 ml-3">
                       <li>Fruity Loops</li>
                   </ul>
