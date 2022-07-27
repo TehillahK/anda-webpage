@@ -50,7 +50,7 @@ const ProducerBio = (props) => {
                           credits.map(
                               (credit)=>{
                                   return(
-                                      <li key={credit} className={"my-1"}>{credit.title}</li>
+                                      <li key={credit.title} className={"my-1"}>{credit.title}</li>
                                   )
                               }
                           )
