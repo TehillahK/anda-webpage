@@ -32,7 +32,7 @@ export default function Navbar() {
                                     <a>Production</a>
                                 </li>
                                 <li><a>Mixing/Mastering</a></li>
-                                <li><a>How to join</a></li>
+                                <li><a>Features</a></li>
                             </ul>
                         </li>
                         <li><a>Item 3</a></li>
@@ -60,11 +60,15 @@ export default function Navbar() {
                         <ul tabIndex="0" className=" menu menu-compact dropdown-content mt-1 p-2 shadow bg-base-100 rounded-box w-52 ">
                             <li><a>Production</a></li>
                             <li><a>Mixing/Mastering</a></li>
-                            <li><a>Promotion</a></li>
+                            <li><a>Features</a></li>
                         </ul>
                     </li>
 
-                    <li><a>How to join</a></li>
+                    <li>
+                        <Link href= {"/production-team"}>
+                            <a>Production Team</a>
+                        </Link>
+                    </li>
                 </ul>
             </div>
             <div className="navbar-end">

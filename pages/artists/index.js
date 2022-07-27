@@ -19,6 +19,7 @@ import {Parallax, ParallaxLayer} from '@react-spring/parallax'
 import {useCollection} from "react-firebase-hooks/firestore";
 import firebaseApp from "../../firebase/firebase.config"
 import {getFirestore, collection, getDocs} from 'firebase/firestore';
+import ArtistSlider from "../../components/ArtistSlider";
 
 
 export async function getServerSideProps() {
@@ -52,6 +53,7 @@ export default function ArtistsPage({artists}) {
 
             <div>
                 <h1 className="text-5xl font-bold text-center pb-6 ">The Roster</h1>
+
                 <Swiper
                     loop={true}
                     centeredSlides={true}
@@ -70,6 +72,7 @@ export default function ArtistsPage({artists}) {
                     grabCursor={true}
                     modules={[EffectCoverflow]}
 
+
                 >
                     {
                         artists.map(
@@ -86,6 +89,7 @@ export default function ArtistsPage({artists}) {
 
 
                 </Swiper>
+
             </div>
 
             <AlbumsAd/>

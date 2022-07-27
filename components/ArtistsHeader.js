@@ -29,8 +29,7 @@ const ArtistsHeader = () => {
   return(
 
       <div className="hero   bg-transparent  md:min-h-screen" >
-          <div className="hero-content flex-col lg:flex-row-reverse">
-
+          <div className="hero-content flex-col lg:flex-row">
               <div >
                   <h1 className="text-5xl font-bold">Artists</h1>
                   <p className="text-2xl py-6 "> ANDA focuses on applying commercially
