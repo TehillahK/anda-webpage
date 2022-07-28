@@ -33,7 +33,6 @@ export default function ProductionTeam({producers}) {
             <Parallax pages={6}>
                 <ParallaxLayer  speed={1}
                                 offset={0}
-                                style={{backgroundImage:"url('https://images.pexels.com/photos/6328792/pexels-photo-6328792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",backgroundSize:"cover"}}
                 >
                     <Navbar />
                     <ProducerHeader />
