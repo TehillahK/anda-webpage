@@ -28,7 +28,7 @@ function ArtistsCard(){
 const ArtistsHeader = () => {
   return(
 
-      <div className="hero   bg-transparent  md:min-h-screen" >
+      <div className="hero min-h-screen   bg-transparent " >
           <div className="hero-content flex-col lg:flex-row">
               <div >
                   <h1 className="text-5xl font-bold">Artists</h1>

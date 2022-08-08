@@ -10,7 +10,7 @@ const ProducerBio = (props) => {
   return(
       <div className="hero min-h-screen min-w-fit bg-base-100">
           <div className="hero-content flex-col lg:flex-row">
-              <Image src={photoUrl} objectFit={"cover"} height={1000} width={800} />
+              <Image src={photoUrl} objectFit={"cover"} height={800} width={600} />
               <div>
                   <h1 className="text-5xl font-bold ">{name}</h1>
 

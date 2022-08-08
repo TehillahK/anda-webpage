@@ -17,12 +17,13 @@ function Slider(props) {
                 modifier: 1,
                 slideShadows: false
             }}
-            slidesPerView={3}
+          //  slidesPerView={3}
 
 
             grabCursor={true}
             modules={[EffectCoverflow]}
 
+            slidesPerView={3}
         >
             {
                 artists.map(

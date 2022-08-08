@@ -35,7 +35,11 @@ export default function Navbar() {
                                 <li><a>Features</a></li>
                             </ul>
                         </li>
-                        <li><a>Item 3</a></li>
+                        <li>
+                            <Link href= {"/production-team"}>
+                                <a>Production Team</a>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <Link href={"/"}>
@@ -69,6 +73,7 @@ export default function Navbar() {
                             <a>Production Team</a>
                         </Link>
                     </li>
+                   
                 </ul>
             </div>
             <div className="navbar-end">
